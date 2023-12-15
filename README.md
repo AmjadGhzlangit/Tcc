@@ -8,11 +8,11 @@ Alternative installation is possible without local dependencies relying on [Dock
 
 Clone the repository
 
-    git clone https://github.com/AmjadGhzlangit/Mall.git
+    git clone https://github.com/AmjadGhzlangit/Tcc.git
 
 Switch to the repo folder
 
-    cd Mall
+    cd Tcc
 
 Install all the dependencies using composer
 
