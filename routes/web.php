@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Admin\Student\StudentController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,5 +15,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('Admin.Pages.User.index');
 });
+
+Route::resource(
+    'students' , StudentController::class,
+);

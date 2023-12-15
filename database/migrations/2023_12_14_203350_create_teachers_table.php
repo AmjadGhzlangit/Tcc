@@ -11,6 +11,7 @@ return new class extends Migration
     {
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
+            $table->string('teacher_number');
             $table->foreignIdFor(User::class);
            
             $table->timestamps();

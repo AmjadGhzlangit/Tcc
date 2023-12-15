@@ -17,10 +17,11 @@ return new class extends Migration
             $table->string('last_name');
             $table->string('father_name');
             $table->string('mother_name');
-            $table->string('data_birth');
+            $table->date('date_birth');
             $table->string('gender');
             $table->string('address');
             $table->string('type');
+            $table->string('image');
             $table->string('phone')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();

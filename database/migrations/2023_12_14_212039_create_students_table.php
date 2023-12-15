@@ -14,9 +14,13 @@ return new class extends Migration
     {
         Schema::create('students', function (Blueprint $table) {
             $table->id();
+            $table->string('student_number');
+            $table->string('student_email');
             $table->foreignIdFor(User::class);
             $table->string('department');
             $table->string('status');
+            $table->string('year');
+            $table->string('semester');
             $table->timestamps();
         });
     }
