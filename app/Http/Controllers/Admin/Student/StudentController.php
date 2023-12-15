@@ -14,7 +14,7 @@ class StudentController extends Controller
     public function index()
     {
          $students = Student::with('user')->get();
-         return view('Admin.Pages.User.index' ,compact('students'));
+         return view('Admin.Pages.Student.index' ,compact('students'));
     }
 
     /**
@@ -38,7 +38,7 @@ class StudentController extends Controller
      */
     public function show(Student $student)
     {
-            return view('Student.show',compact($student));
+        return view('Admin.Pages.Student.show' ,compact('student'));
     }
 
     /**

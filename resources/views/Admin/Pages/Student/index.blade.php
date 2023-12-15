@@ -6,7 +6,7 @@
     <div class="card-body">
       <h4 class="card-title">Studnets table</h4>
       <div class="table-responsive pt-3">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-hover">
           <thead>
             <tr>
               <th>ID</th>
