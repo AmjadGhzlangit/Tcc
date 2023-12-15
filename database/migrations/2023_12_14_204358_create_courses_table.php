@@ -18,7 +18,8 @@ return new class extends Migration
             $table->string('course_name');
             $table->unsignedBigInteger('courseable_id');
             $table->string('courseable_type');
-            $table->string('year');
+            $table->date('year');
+            $table->string('department');
             $table->string('semester');
             $table->timestamps();
         });

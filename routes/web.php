@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Admin\Course\CourseController;
+use App\Http\Controllers\Admin\Student\StudentController;
 use App\Http\Controllers\Admin\User\UserController;
 use App\Http\Controllers\Admin\Teacher\TeacherController;
 use Illuminate\Support\Facades\Route;
@@ -19,9 +21,9 @@ Route::get('/', function () {
     return view('Admin.Pages.User.index');
 });
 
-Route::resource(
-    'users' , UserController::class,
-);
-Route::resource(
-    'teachers' , TeacherController::class,
-);
+Route::resources([
+    'users' => UserController::class,
+    'teachers' => TeacherController::class,
+    'courses' => CourseController::class,
+]);
+

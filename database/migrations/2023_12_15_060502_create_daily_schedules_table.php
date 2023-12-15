@@ -18,6 +18,7 @@ return new class extends Migration
             $table->string('day_name');
             $table->foreignIdFor(Course::class);
             $table->foreignIdFor(Teacher::class);
+            $table->string('department');
             $table->string('location');
             $table->string('start_time');
             $table->string('end_time');

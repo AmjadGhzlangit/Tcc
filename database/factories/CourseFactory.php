@@ -13,9 +13,10 @@ class CourseFactory extends Factory
         return [
             'course_name' => $this->faker->word,
             'courseable_id' => $this->faker->numberBetween(1, 100),
-            'courseable_type' =>Teacher::class,
-            'year' => $this->faker->numberBetween(2022, 2023),
-            'semester' => $this->faker->randomElement(['Spring', 'Summer', 'Fall']),
+            'courseable_type' => Teacher::class,
+            'year' => $this->faker->dateTimeBetween('now', '+1 year')->format('Y-m-d'), // Generate a valid date string
+            'department' => $this->faker->randomElement(['Software Engineering', 'Network Engineering', 'Computer Engineering']),
+            'semester' => $this->faker->randomElement(['Semester One', 'Semester Two']),
         ];
     }
 }

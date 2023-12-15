@@ -13,6 +13,7 @@ class Course extends Model
         'courseable_id',
         'courseable_type',
         'year',
+        'department',
         'semester',
     ];
 

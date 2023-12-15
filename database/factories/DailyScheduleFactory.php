@@ -23,6 +23,7 @@ class DailyScheduleFactory extends Factory
             'course_id' => Course::inRandomOrder()->first()->id,
             'teacher_id' => Teacher::inRandomOrder()->first()->id,
             'location' => $this->faker->address,
+            'department' => $this->faker->randomElement(['Software Engineering', 'Network Engineering', 'Computer Engineering']),
             'start_time' => $this->faker->time(),
             'end_time' => $this->faker->time(),
         ];
