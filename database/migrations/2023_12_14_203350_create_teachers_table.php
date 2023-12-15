@@ -14,6 +14,7 @@ return new class extends Migration
             $table->string('teacher_number');
             $table->string('teacher_name');
             $table->string('phone');
+            $table->string('image')->nullable();
             $table->string('email');
             $table->string('major');
             $table->string('contract_type');

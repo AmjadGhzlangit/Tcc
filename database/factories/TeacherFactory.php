@@ -24,6 +24,7 @@ class TeacherFactory extends Factory
             'email' => $this->faker->unique()->safeEmail,
             'major' => $this->faker->word,
             'contract_type' => $this->faker->word,
+            'image' => null, 
         ];
     }
 }

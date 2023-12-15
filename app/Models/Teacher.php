@@ -16,6 +16,7 @@ class Teacher extends Model
         'email',
         'major',
         'contract_type',
+        'image',
     ];
 
     public function user()

@@ -4,7 +4,7 @@ use App\Http\Controllers\Admin\Course\CourseController;
 use App\Http\Controllers\Admin\DailySchedule\DailyScheduleController;
 use App\Http\Controllers\Admin\Student\StudentController;
 use App\Http\Controllers\Admin\User\UserController;
-use App\Http\Controllers\TeacherController;
+use App\Http\Controllers\Admin\Teacher\TeacherController;
 use Illuminate\Support\Facades\Route;
 
 /*
