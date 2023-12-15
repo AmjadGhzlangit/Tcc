@@ -12,8 +12,12 @@ return new class extends Migration
         Schema::create('teachers', function (Blueprint $table) {
             $table->id();
             $table->string('teacher_number');
-            $table->foreignIdFor(User::class);
-           
+            $table->string('teacher_name');
+            $table->string('phone');
+            $table->string('email');
+            $table->string('major');
+            $table->string('contract_type');
+
             $table->timestamps();
         });
     }

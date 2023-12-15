@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\DailySchedule;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -12,6 +13,7 @@ class DailyScheduleSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DailySchedule::factory()->count(10)->create();
+
     }
 }

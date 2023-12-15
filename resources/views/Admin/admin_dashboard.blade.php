@@ -24,7 +24,7 @@
               <div class="img-ss rounded-circle bg-light border mr-3"></div>
               Light
             </div>
-            <div class="sidebar-bg-options selected" id="sidebar-dark-theme">
+            <div class="sidebar-bg-options " id="sidebar-dark-theme">
               <div class="img-ss rounded-circle bg-dark border mr-3"></div>
               Dark
             </div>

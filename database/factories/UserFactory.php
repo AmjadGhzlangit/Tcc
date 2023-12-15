@@ -26,18 +26,24 @@ class UserFactory extends Factory
         return [
             'first_name' => $this->faker->firstName,
             'last_name' => $this->faker->lastName,
-            'father_name' => $this->faker->lastName,
-            'mother_name' => $this->faker->lastName,
+            'father_name' => $this->faker->firstName('male'), // Assuming a male father
+            'mother_name' => $this->faker->firstName('female'), // Assuming a female mother
             'date_birth' => $this->faker->date,
             'gender' => $this->faker->randomElement(['Male', 'Female']),
             'address' => $this->faker->address,
-            'type' => $this->faker->randomElement(['Student', 'Teacher', 'Admin']),
-            'image' => $this->faker->imageUrl(),
+
+            'image' => null, 
             'phone' => $this->faker->phoneNumber,
             'email' => $this->faker->unique()->safeEmail,
             'email_verified_at' => now(),
-            'password' => bcrypt('password'), 
+            'password' => Hash::make('password'), 
             'remember_token' => Str::random(10),
+            'student_number' => $this->faker->unique()->numberBetween(100000, 999999),
+            'student_email' => $this->faker->unique()->safeEmail,
+            'department' => $this->faker->word,
+            'status' => $this->faker->randomElement(['Passed', 'Inactive']),
+            'year' => $this->faker->randomElement(['First', 'Second', 'Third', 'Fourth']),
+            'semester' => $this->faker->randomElement(['Spring', 'Summer', 'Fall']),
         ];
     }
 

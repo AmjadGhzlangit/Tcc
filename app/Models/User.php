@@ -33,6 +33,12 @@ class User extends Authenticatable
         'email_verified_at',
         'password',
         'remember_token',
+        'student_number',
+        'student_email',
+        'department',
+        'status',
+        'year',
+        'semester',
     ];
 
     /**

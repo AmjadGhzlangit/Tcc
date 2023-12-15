@@ -16,11 +16,11 @@ return new class extends Migration
         Schema::create('daily_schedules', function (Blueprint $table) {
             $table->id();
             $table->string('day_name');
-            $table->foreignIdFor(Course::class,'course_name');
-            $table->foreignIdFor(Teacher::class,'teacher_name');
+            $table->foreignIdFor(Course::class);
+            $table->foreignIdFor(Teacher::class);
             $table->string('location');
-            $table->date('start_time');
-            $table->date('end_time');
+            $table->string('start_time');
+            $table->string('end_time');
             $table->timestamps();
         });
     }
