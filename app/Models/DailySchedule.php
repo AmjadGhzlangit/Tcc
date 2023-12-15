@@ -10,9 +10,10 @@ class DailySchedule extends Model
 
     protected $fillable = [
         'day_name',
-        'course_id', // Assuming your foreign key column name is 'course_id'
-        'teacher_id', // Assuming your foreign key column name is 'teacher_id'
+        'course_id', 
+        'teacher_id', 
         'location',
+        'department',
         'start_time',
         'end_time',
     ];

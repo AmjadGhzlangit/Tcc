@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Admin\Course\CourseController;
+use App\Http\Controllers\Admin\DailySchedule\DailyScheduleController;
 use App\Http\Controllers\Admin\Student\StudentController;
 use App\Http\Controllers\Admin\User\UserController;
 use App\Http\Controllers\TeacherController;
@@ -25,5 +26,6 @@ Route::resources([
     'users' => UserController::class,
     'teachers' => TeacherController::class,
     'courses' => CourseController::class,
+    'dailySchedules' => DailyScheduleController::class,
 ]);
 

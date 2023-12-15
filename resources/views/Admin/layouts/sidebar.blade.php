@@ -49,5 +49,18 @@
         </ul>
       </div>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+        <i class="typcn typcn-briefcase menu-icon"></i>
+        <span class="menu-title">Teacher</span>
+        <i class="typcn typcn-chevron-right menu-arrow"></i>
+      </a>
+      <div class="collapse" id="ui-basic">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="{{ route('teachers.index') }}">List Course</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{{ route('teachers.create') }}">Add Course</a></li>
+        </ul>
+      </div>
+    </li>
   </ul>
 </nav>
