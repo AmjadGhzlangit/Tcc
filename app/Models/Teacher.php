@@ -14,9 +14,9 @@ class Teacher extends Model
         'teacher_name',
         'phone',
         'email',
-        'user_id',
         'major',
         'contract_type',
+        'image',
     ];
 
     public function user()
