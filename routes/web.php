@@ -5,6 +5,8 @@ use App\Http\Controllers\Admin\Course\CourseController;
 use App\Http\Controllers\Admin\DailySchedule\DailyScheduleController;
 use App\Http\Controllers\Admin\Teacher\TeacherController;
 use App\Http\Controllers\Admin\User\UserController;
+use App\Http\Controllers\Teacher\Student\StudentController;
+use App\Http\Controllers\Teacher\Student\TeacherController as StudentTeacherController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -18,14 +20,23 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('auth.login');
-});
-
-// Route::get('/home', function () {
+// Route::get('/', function () {
 //     return view('auth.login');
-// })->middleware(['auth', 'verified'])->name('dashboard');
-
+// });
+Route::prefix('samer')->group(function () {
+    Route::get('/', function () {
+        return view('auth.login');
+    });
+});
+// Route::get('/admin', function () {
+//     return view('auth.login');
+// });
+Route::prefix('teacher')->group(function () {
+    // Route::resource('students', StudentController::class)->names('students');
+    Route::resource('courses', StudentTeacherController::class)->names('courses');
+    Route::get('get-student',[StudentTeacherController::class,'getStudent']);
+    // Route::resource('dailySchedules', DailyScheduleController::class)->names('dailySchedules');
+});
 Route::middleware(['auth' , 'is_admin'])->group(function () {
     Route::prefix('admin')->group(function () {
         Route::resource('users', UserController::class)->names('users');

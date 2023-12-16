@@ -14,7 +14,7 @@ class Teacher extends Model
         'teacher_name',
         'phone',
         'email',
-        'major',
+        'subject',
         'contract_type',
         'image',
     ];
@@ -26,7 +26,7 @@ class Teacher extends Model
 
     public function courses()
     {
-        return $this->morphToMany(Course::class, 'courseable');
+        return $this->hasOne(Course::class);
     }
 
 }

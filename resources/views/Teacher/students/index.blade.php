@@ -27,12 +27,13 @@
               <th>Studnet Department</th>
               <th>Year</th>
               <th>Status</th>
+              <th>Mark</th>
               <th>Image</th>
               <th colspan="3" class="text-center">Options</th>
             </tr>
           </thead>
           <tbody>
-            @forelse ($users as $user )
+            @forelse ($users as $key => $user)
             <tr>
               <td>
                 {{ $user->id }}
@@ -51,6 +52,10 @@
               </td>
               <td>
                 {{ $user->status }}
+              </td>
+              <td>
+
+                <td>{{ $marks[$key] }}</td>
               </td>
               <td><img src="{{ asset('storage/'.$user->image) }}" alt="" width="30px" height="30px"></td>
               <td>

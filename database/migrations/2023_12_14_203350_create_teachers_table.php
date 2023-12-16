@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('phone');
             $table->string('image')->nullable();
             $table->string('email');
-            $table->string('major');
+            $table->string('subject');
             $table->string('contract_type');
 
             $table->timestamps();

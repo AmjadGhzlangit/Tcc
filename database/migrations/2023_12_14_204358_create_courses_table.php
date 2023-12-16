@@ -16,8 +16,7 @@ return new class extends Migration
         Schema::create('courses', function (Blueprint $table) {
             $table->id();
             $table->string('course_name');
-            $table->unsignedBigInteger('courseable_id');
-            $table->string('courseable_type');
+          $table->foreignIdFor(Teacher::class);
             $table->date('year');
             $table->string('department');
             $table->string('semester');

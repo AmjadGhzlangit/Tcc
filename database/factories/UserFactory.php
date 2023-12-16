@@ -38,7 +38,7 @@ class UserFactory extends Factory
             'remember_token' => Str::random(10),
             'student_number' => $this->faker->unique()->numberBetween(100000, 999999),
             'student_email' => $this->faker->unique()->safeEmail,
-            'department' => $this->faker->word,
+            'department' => $this->faker->randomElement(['Software Engineering', 'Network Engineering', 'Computer Engineering']),
             'status' => $this->faker->randomElement(['Passed', 'Inactive']),
             'year' => $this->faker->randomElement(['First', 'Second', 'Third', 'Fourth']),
             'semester' => $this->faker->randomElement(['Spring', 'Summer', 'Fall']),

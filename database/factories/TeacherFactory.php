@@ -22,7 +22,15 @@ class TeacherFactory extends Factory
             'teacher_name' => $this->faker->name,
             'phone' => $this->faker->phoneNumber,
             'email' => $this->faker->unique()->safeEmail,
-            'major' => $this->faker->word,
+            'subject' => $this->faker->randomElement([
+                'Programming 1',
+                'Programming 2',
+                'Mathematics 1',
+                'Mathematics 2',
+                'English 1',
+                'Internet Technologies',
+                'English 2',
+            ]),
             'contract_type' => $this->faker->word,
             'image' => null, 
         ];

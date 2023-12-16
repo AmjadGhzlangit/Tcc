@@ -10,15 +10,18 @@ class Course extends Model
 
     protected $fillable = [
         'course_name',
-        'courseable_id',
-        'courseable_type',
+        'teacher_id',
         'year',
         'department',
         'semester',
     ];
 
-    public function courseable()
-    {
-        return $this->morphTo();
-    }
+   public function teacher(){
+    return $this->belongsTo(Teacher::class);
+   }
+
+   public function grades()
+   {
+    return $this->hasMany(Grades::class);
+   }
 }
