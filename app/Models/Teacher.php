@@ -24,4 +24,9 @@ class Teacher extends Model
         return $this->belongsTo(User::class);
     }
 
+    public function courses()
+    {
+        return $this->morphToMany(Course::class, 'courseable');
+    }
+
 }

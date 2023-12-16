@@ -1,12 +1,11 @@
 <?php
 
-namespace App\Http\Controllers\Admin\Teacher\TeacherController;
+namespace App\Http\Controllers\Admin\Teacher;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\Teacher\StoreTeacherRequest;
 use App\Http\Requests\Admin\Teacher\UpdateTeacherRequest;
 use App\Models\Teacher;
-use Illuminate\Http\Request;
 
 class TeacherController extends Controller
 {
@@ -40,7 +39,7 @@ class TeacherController extends Controller
             $Teacher_data['image'] = $imageName;
         }
         $Teachers =  Teacher::create($Teacher_data);
-        return redirect()->route('Teachers.index',compact('Teachers'))->with('message','Teacher Added  Successfully');
+        return redirect()->route('teachers.index',compact('Teachers'))->with('message','Teacher Added  Successfully');
     }
 
     /**
@@ -62,7 +61,7 @@ class TeacherController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateTeacherRequest $request, Teacher $Teacher)
+    public function update(UpdateTeacherRequest $request, Teacher $teacher)
     {
         $teacher_data = $request->validated();
         if ($request->hasFile('image')) {
@@ -71,8 +70,8 @@ class TeacherController extends Controller
             $image->storePubliclyAs('public', $imageName);
             $teacher_data['image'] = $imageName;
         }
-        $Teacher->update( $teacher_data);
-        return redirect()->route('Teachers.index')->with('message','Teacher Update Successfully');
+        $teacher->update($teacher_data);
+        return redirect()->route('teachers.index')->with('message','Teacher Update Successfully');
     }
 
     /**
@@ -82,6 +81,6 @@ class TeacherController extends Controller
     {
         $teacher->delete();
 
-        return redirect()->route('teacher.index')->with('message','Teacher deleted Successfully');;
+        return redirect()->route('teacher.index')->with('delete','Teacher deleted Successfully');;
     }
 }

@@ -57,8 +57,21 @@
       </a>
       <div class="collapse" id="ui-basic">
         <ul class="nav flex-column sub-menu">
-          <li class="nav-item"> <a class="nav-link" href="{{ route('teachers.index') }}">List Course</a></li>
-          <li class="nav-item"> <a class="nav-link" href="{{ route('teachers.create') }}">Add Course</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{{ route('teachers.index') }}">List Teacher</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{{ route('teachers.create') }}">Add Teacher</a></li>
+        </ul>
+      </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
+        <i class="typcn typcn-briefcase menu-icon"></i>
+        <span class="menu-title">Daily Schedules</span>
+        <i class="typcn typcn-chevron-right menu-arrow"></i>
+      </a>
+      <div class="collapse" id="ui-basic">
+        <ul class="nav flex-column sub-menu">
+          <li class="nav-item"> <a class="nav-link" href="{{ route('dailySchedules.index') }}">List Daily Schedules</a></li>
+          <li class="nav-item"> <a class="nav-link" href="{{ route('dailySchedules.create') }}">Add Daily Schedules</a></li>
         </ul>
       </div>
     </li>

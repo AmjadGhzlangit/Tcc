@@ -31,11 +31,13 @@
           <div class="form-group">
               <label for="teacherImage">Teacher Image</label>
               <input type="file" class="form-control" id="teacherImage" name="image" placeholder="Teacher Image">
-              <img src="{{ asset('storage/'.$teacher->image) }}" alt="Teacher Image" width="100px" height="100px">
+             
           </div>
 
           <button type="submit" class="btn btn-primary me-2">Update</button>
       </form>
+      <a href="{{ route('teachers.index') }}" class="btn btn-secondary">Back</a>
+
     </div>
   </div>
 </div>

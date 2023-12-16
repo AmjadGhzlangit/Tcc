@@ -31,8 +31,6 @@ class UserFactory extends Factory
             'date_birth' => $this->faker->date,
             'gender' => $this->faker->randomElement(['Male', 'Female']),
             'address' => $this->faker->address,
-
-            'image' => null, 
             'phone' => $this->faker->phoneNumber,
             'email' => $this->faker->unique()->safeEmail,
             'email_verified_at' => now(),

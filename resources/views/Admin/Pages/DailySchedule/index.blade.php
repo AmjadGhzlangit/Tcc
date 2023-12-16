@@ -10,6 +10,11 @@
         {{ session('message') }}
     </div>
 @endif
+@if (session('delete'))
+<div class="alert alert-danger">
+    {{ session('delete') }}
+</div>
+@endif
     <div class="card-body">
       <h4 class="card-title">Daily Schedules Table</h4>
       <div class="table-responsive pt-3">

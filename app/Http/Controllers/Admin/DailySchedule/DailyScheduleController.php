@@ -66,6 +66,6 @@ class DailyScheduleController extends Controller
     {
         $dailySchedule->delete();
 
-        return redirect()->route('dailySchedules.index')->with('message','DailySchedule deleted Successfully');;
+        return redirect()->route('dailySchedules.index')->with('delete','DailySchedule deleted Successfully');;
     }
 }

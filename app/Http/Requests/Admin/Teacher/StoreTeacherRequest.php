@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Requests\Admin\Tracher;
+namespace App\Http\Requests\Admin\Teacher;
 
 use Illuminate\Foundation\Http\FormRequest;
 
@@ -20,6 +20,7 @@ class StoreTeacherRequest extends FormRequest
             'phone' => ['required', 'string'],
             'email' => ['required', 'email'],
             'major' => ['required', 'string'],
+            'image' => ['image', 'mimes:jpeg,png,jpg,gif', 'max:2048'],
             'contract_type' => ['required', 'string'],
         ];
     }

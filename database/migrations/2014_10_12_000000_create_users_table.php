@@ -20,7 +20,7 @@ return new class extends Migration
             $table->date('date_birth');
             $table->string('gender');
             $table->string('address');
-            $table->string('image')->nullable();
+            $table->string('image')->default('user.png');
             $table->string('phone')->unique();
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
@@ -31,6 +31,7 @@ return new class extends Migration
             $table->string('status');
             $table->string('year');
             $table->string('semester');
+            $table->boolean('is_admin')->default(false);
             $table->rememberToken();
             $table->timestamps();
         });
