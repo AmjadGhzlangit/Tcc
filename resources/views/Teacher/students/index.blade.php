@@ -59,11 +59,6 @@
               </td>
               <td><img src="{{ asset('storage/'.$user->image) }}" alt="" width="30px" height="30px"></td>
               <td>
-                <form action="{{ route('users.destroy', $user->id) }}" method="POST">
-                    @csrf
-                    @method('delete')
-                <input type="submit" class="btn btn-danger btn-rounded btn-fw" value="Delete">
-              </form>
             </td>
                 <td>
                     <form action="{{ route('users.edit', $user->id) }}" method="GET">

@@ -1,0 +1,15 @@
+<script src="{{ asset('User/js/jquery-3.3.1.min.js') }}"></script>
+  <script src="{{ asset('User/js/jquery-migrate-3.0.1.min.js') }}"></script>
+  <script src="{{ asset('User/js/jquery-ui.js') }}"></script>
+  <script src="{{ asset('User/js/popper.min.js') }}"></script>
+  <script src="{{ asset('User/js/bootstrap.min.js') }}"></script>
+  <script src="{{ asset('User/js/owl.carousel.min.js') }}"></script>
+  <script src="{{ asset('User/js/jquery.stellar.min.js') }}"></script>
+  <script src="{{ asset('User/js/jquery.countdown.min.js') }}"></script>
+  <script src="{{ asset('User/js/bootstrap-datepicker.min.js') }}"></script>
+  <script src="{{ asset('User/js/jquery.easing.1.3.js') }}"></script>
+  <script src="{{ asset('User/js/aos.js') }}"></script>
+  <script src="{{ asset('User/js/jquery.fancybox.min.js') }}"></script>
+  <script src="{{ asset('User/js/jquery.sticky.js') }}"></script>
+  <script src="{{ asset('User/js/jquery.mb.YTPlayer.min.js') }}"></script>
+  <script src="{{ asset('User/js/main.js') }}"></script>

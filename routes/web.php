@@ -28,9 +28,9 @@ Route::prefix('samer')->group(function () {
         return view('auth.login');
     });
 });
-// Route::get('/admin', function () {
-//     return view('auth.login');
-// });
+Route::get('/', function () {
+    return view('User.index');
+});
 Route::prefix('teacher')->group(function () {
     // Route::resource('students', StudentController::class)->names('students');
     Route::resource('courses', StudentTeacherController::class)->names('courses');
