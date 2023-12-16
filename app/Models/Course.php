@@ -24,4 +24,8 @@ class Course extends Model
    {
     return $this->hasMany(Grades::class);
    }
+   public function schedule()
+   {
+    return $this->hasMany(DailySchedule::class);
+   }
 }
