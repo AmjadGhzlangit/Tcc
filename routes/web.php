@@ -1,8 +1,8 @@
 <?php
 
+use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Admin\Course\CourseController;
 use App\Http\Controllers\Admin\DailySchedule\DailyScheduleController;
-use App\Http\Controllers\Admin\Student\StudentController;
 use App\Http\Controllers\Admin\Teacher\TeacherController;
 use App\Http\Controllers\Admin\User\UserController;
 use Illuminate\Support\Facades\Route;
@@ -19,13 +19,24 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('Admin.Pages.User.index');
+    return view('auth.login');
 });
 
-Route::resources([
-    'users' => UserController::class,
-    'teachers' => TeacherController::class,
-    'courses' => CourseController::class,
-    'dailySchedules' => DailyScheduleController::class,
-]);
+// Route::get('/home', function () {
+//     return view('auth.login');
+// })->middleware(['auth', 'verified'])->name('dashboard');
 
+Route::middleware(['auth' , 'is_admin'])->group(function () {
+    Route::prefix('admin')->group(function () {
+        Route::resource('users', UserController::class)->names('users');
+        Route::resource('teachers', TeacherController::class)->names('teachers');
+        Route::resource('courses', CourseController::class)->names('courses');
+        Route::resource('dailySchedules', DailyScheduleController::class)->names('dailySchedules');
+    });
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
+
+
+require __DIR__.'/auth.php';

@@ -109,17 +109,23 @@
       <li class="nav-item nav-profile dropdown">
         <a class="nav-link dropdown-toggle  pl-0 pr-0" href="#" data-toggle="dropdown" id="profileDropdown">
           <i class="typcn typcn-user-outline mr-0"></i>
-          <span class="nav-profile-name">Evan Morales</span>
+          <span class="nav-profile-name">{{ auth()->user()->first_name }}</span>
         </a>
         <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
           <a class="dropdown-item">
           <i class="typcn typcn-cog text-primary"></i>
           Settings
           </a>
-          <a class="dropdown-item">
-          <i class="typcn typcn-power text-primary"></i>
-          Logout
+         
+          <form method="POST" action="{{ route('logout') }}">
+            @csrf
+
+            <a class="dropdown-item" :href="route('logout')"
+                    onclick="event.preventDefault();
+                                this.closest('form').submit();">
+                {{ __('Log Out') }}
           </a>
+        </form>
         </div>
       </li>
     </ul>
